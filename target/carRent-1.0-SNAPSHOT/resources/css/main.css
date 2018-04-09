@@ -1,0 +1,39 @@
+.carMain{
+    background:url("../img/carForMain.jpg") no-repeat 50% 50%;
+    height: 500px;
+}
+.tagline{
+    margin-top: 30px;
+}
+.carPhoto{
+    height: 250px;
+    width: 250px;
+}
+.carPhotoSearch{
+    height: 180px;
+    width: 180px;
+}
+.stLbl{
+
+
+}
+.reccomendation{
+    margin-top: 30px;
+}
+.InLog{
+    background: white;
+}
+.instruction{
+
+    margin-top: 50px;
+    background: url("../img/grafiki8-4.png") no-repeat 50%;
+    height:700px;
+}
+.end{
+    color:whitesmoke;
+}
+.b1{
+    background: #333333;
+    colour:white;
+
+}
