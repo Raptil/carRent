@@ -27,7 +27,7 @@
     </div>
 </div>
 <div class="modal fade" id="modal-1">
-    <form action="${contextPath}/login" method="post" >
+    <form action="${contextPath}/login" method="post">
         <div class="modal-dialog modal-sm   ">
             <div class="modal-header InLog">
                 <button class="close" type="button" data-dismiss="modal">&times;</button>
@@ -35,8 +35,10 @@
             </div>
             <div class="modal-body">
 
-                <input name="email" type="text" class="form-control " id="Email1" placeholder="Email" autofocus="true"></input>
-                <input  name="password" type="password" class="form-control " id="Password1" placeholder="пароль"></input>
+                <input name="email" type="text" class="form-control " id="Email1" placeholder="Email"
+                       autofocus="true"></input>
+                <input name="password" type="password" class="form-control " id="Password1"
+                       placeholder="пароль"></input>
             </div>
             <div class="modal-footer InLog">
                 <a href="registration.html">Регистрация</a>
@@ -52,15 +54,17 @@
         <div class="row">
             <div class="form-group  col-lg-3">
                 <label for="City1">Город</label>
-                <form:input  path="city" type="text" class="form-control " id="City1" placeholder="City"></form:input>
+                <form:input path="city" type="text" class="form-control " id="City1" placeholder="City"></form:input>
             </div>
             <div class="form-group  col-lg-3">
                 <label for="MaxCost1">Максимальная стоимость</label>
-                <form:input path="maxPrice" type="text" class="form-control " id="MaxCost1" placeholder="10000"></form:input>
+                <form:input path="maxPrice" type="text" class="form-control " id="MaxCost1"
+                            placeholder="10000"></form:input>
             </div>
             <div class="form-group col-lg-3">
                 <label for="MinCost1">Минимальная стоимость</label>
-                <form:input path="minPrice" type="text" class="form-control " id="MinCost1" placeholder="0"></form:input>
+                <form:input path="minPrice" type="text" class="form-control " id="MinCost1"
+                            placeholder="0"></form:input>
             </div>
             <div class="form-group col-lg-3">
                 <label for="Model1">Модель</label>
@@ -68,7 +72,8 @@
             </div>
             <div class="form-group col-lg-3">
                 <label for="BodyType1">Тип кузова</label>
-                <form:input  path="bodyType" type="text" class="form-control " id="BodyType1" placeholder="0"></form:input>
+                <form:input path="bodyType" type="text" class="form-control " id="BodyType1"
+                            placeholder="0"></form:input>
             </div>
             <div class="form-group col-lg-3">
                 <label for="MinFuel1">Минимальное потребление топлива</label>
@@ -81,32 +86,34 @@
 
 
         </div>
-        <button  type="search" class="btn-lg btn-success col-lg-4 col-lg-offset-4">Поиск</button>
+        <button type="search" class="btn-lg btn-success col-lg-4 col-lg-offset-4">Поиск</button>
 
     </form:form>
 </div>
 <div class="container">
-        <c:forEach items="${cars}" var="car">
+    <c:forEach items="${cars}" var="car">
 
-         <br>
-            <div class="container">
+        <br>
+        <div class="container">
 
-               <div class="catalog clearfix">
+            <div class="catalog clearfix">
 
-                  <img class="carPhotoSearch col-lg-3" src="/resources/img/lada.jpg">
-                   <a href="/car/${car.id_car}"> <h2>${car.model}</h2></a>
-                     <h3> ${car.city} </h3>
-                     <h3>${car.bodyType}</h3>
-               </div>
-
+                <img class="carPhotoSearch col-lg-3" src="/resources/img/lada.jpg">
+                <a href="/car/${car.id_car}"><h2>${car.model}</h2></a>
+                <h3> ${car.city} </h3>
+                <h3>${car.bodyType}</h3>
             </div>
-        </c:forEach>
+
+        </div>
+    </c:forEach>
 </div>
 <footer class="navbar-fixed-bottom navbar-inverse  ">
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>

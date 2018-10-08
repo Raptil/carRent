@@ -16,7 +16,7 @@
     <link href="/resources/css/main.css" rel="stylesheet">
 
 </head>
-<body >
+<body>
 
 <div class="container">
     <div class="navbar ">
@@ -24,7 +24,7 @@
             <a class="navbar-brand" href="mainLogOut.html">CarService</a>
             <ul class="nav nav-pills">
                 <li class="pull-right">
-                    <a href="/logout"  >Выход</a>
+                    <a href="/logout">Выход</a>
                 </li>
                 <li class="dropdown pull-right">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -61,15 +61,15 @@
 
                 </div>
             </div>
-            <div class="item" >
-                <img src="/resources/img/porshe.jpg" width="100%" style="max-height: 500px;" />
+            <div class="item">
+                <img src="/resources/img/porshe.jpg" width="100%" style="max-height: 500px;"/>
                 <div class="carousel-caption">
 
                 </div>
             </div>
 
         </div>
-        <a class="left carousel-control"  role="button" data-slide="prev" href="#homePhoto">
+        <a class="left carousel-control" role="button" data-slide="prev" href="#homePhoto">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Назад/span>
         </a>
@@ -111,29 +111,31 @@
                 </ul>
             </div>
 
-               <div class="container col-lg-12">
+            <div class="container col-lg-12">
                 <div class="row">
-                  <span class="alert-danger">${message}</span>
-                  <button href="/statisticsAdd" role="button" class="btn btn-sm btn-danger " data-target="#modalCar"data-toggle="modal" >Добавить статистику</button>
-                 </div>
+                    <span class="alert-danger">${message}</span>
+                    <button href="/statisticsAdd" role="button" class="btn btn-sm btn-danger " data-target="#modalCar"
+                            data-toggle="modal">Добавить статистику
+                    </button>
                 </div>
+            </div>
             <div class="container col-lg-12">
                 <form action="/bookIt/${car.id_car}" method="post">
                     <div class="form-group ">
                         <label for="DateStart1">Выберите начало аренды</label>
-                        <input  name="dateStart" type="date" class="form-control " id="DateStart1"  >
+                        <input name="dateStart" type="date" class="form-control " id="DateStart1">
                     </div>
                     <div class="form-group ">
                         <label for="DateEnd1">Выберите окончание аренды</label>
-                        <input name="dateEnd" type="date" class="form-control" id="DateEnd1" >
+                        <input name="dateEnd" type="date" class="form-control" id="DateEnd1">
                     </div>
 
-                    <button class="btn btn-sm btn-danger" type="submit" >Забронировать</button>
+                    <button class="btn btn-sm btn-danger" type="submit">Забронировать</button>
                 </form>
             </div>
             <br>
             <div class="container col-lg-12">
-                <c:forEach items="${comments}" var="comment" >
+                <c:forEach items="${comments}" var="comment">
                     <hr>${comment.description}</hr>
                 </c:forEach>
             </div>
@@ -141,30 +143,30 @@
             <div class="form-group container col-lg-12">
                 <form action="/addComment/${car.id_car}" method="post">
                     <label for="TextArea1">Добавить комментарий</label>
-                    <textarea rows="3" class="form-control" name="comment" id="TextArea1" ></textarea>
-                    <button class="btn btn-sm btn-danger" type="submit" >Добавить</button>
+                    <textarea rows="3" class="form-control" name="comment" id="TextArea1"></textarea>
+                    <button class="btn btn-sm btn-danger" type="submit">Добавить</button>
                 </form>
             </div>
         </div>
-        <div class="container col-lg-4 pull-right" >
+        <div class="container col-lg-4 pull-right">
 
-                    <c:forEach items="${carsCity}" var="cars">
-                        <div class="container  ">
+            <c:forEach items="${carsCity}" var="cars">
+                <div class="container  ">
 
-                            <a href="/car/${cars.id_car}">
-                                <img class="carPhoto" src="/resources/img/porshe.jpg" />
-                            </a>
+                    <a href="/car/${cars.id_car}">
+                        <img class="carPhoto" src="/resources/img/porshe.jpg"/>
+                    </a>
 
-                        </div>
-                        <br>
-                    </c:forEach>
+                </div>
+                <br>
+            </c:forEach>
 
         </div>
     </div>
 </div>
 
 <div class="modal fade" id="modalCar">
-    <form:form action="/statisticsAdd/${car.id_car}" method="post" modelAttribute="statistics" >
+    <form:form action="/statisticsAdd/${car.id_car}" method="post" modelAttribute="statistics">
         <div class="modal-dialog modal-sm   ">
             <div class="modal-header InLog">
                 <button class="close" type="button" data-dismiss="modal">&times;</button>
@@ -172,14 +174,18 @@
             </div>
             <div class="modal-body">
 
-                <label >Расстояние</label>
-                <form:input path="distance" type="text" class="form-control " id="Distance1" placeholder="Например, 500" autofocus="true"></form:input>
-                <label >Затраты на топливо</label>
-                <form:input  path="costFuel" type="text" class="form-control " id="costFuel1" placeholder="Например, 1500"></form:input>
-                <label >Комфорт</label>
-                <form:input  path="comfortable" type="text" class="form-control " id="comfortable1" placeholder="Комфорт от 1 до 5"></form:input>
-                <label >Рейтинг</label>
-                <form:input  path="rating" type="text" class="form-control " id="rating1" placeholder="Рейтинг от 1 до 5"></form:input>
+                <label>Расстояние</label>
+                <form:input path="distance" type="text" class="form-control " id="Distance1" placeholder="Например, 500"
+                            autofocus="true"></form:input>
+                <label>Затраты на топливо</label>
+                <form:input path="costFuel" type="text" class="form-control " id="costFuel1"
+                            placeholder="Например, 1500"></form:input>
+                <label>Комфорт</label>
+                <form:input path="comfortable" type="text" class="form-control " id="comfortable1"
+                            placeholder="Комфорт от 1 до 5"></form:input>
+                <label>Рейтинг</label>
+                <form:input path="rating" type="text" class="form-control " id="rating1"
+                            placeholder="Рейтинг от 1 до 5"></form:input>
             </div>
             <div class="modal-footer InLog">
                 <span class="bg-danger">${message}</span>
@@ -192,7 +198,9 @@
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>

@@ -9,13 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Service("CarService")
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarService {
 
     @Autowired
     @Qualifier(value = "CarDao")
@@ -23,6 +22,7 @@ public class CarServiceImpl implements CarService{
 
     @Autowired
     private TransactionDao transactionDao;
+
     @Override
     public void save(Car car) {
         carDao.save(car);
@@ -30,7 +30,7 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public List<Car> filterCar(String city, int minCost, int maxCost, String model, String bodyType, int minFuel, int maxFuel) {
-        return carDao.filterCar(city,minCost,maxCost,model,bodyType,minFuel,maxFuel);
+        return carDao.filterCar(city, minCost, maxCost, model, bodyType, minFuel, maxFuel);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class CarServiceImpl implements CarService{
         Date today = new Date();
         List<Transaction> transactions = transactionDao.readAll();
         List<Car> cars = carDao.readAll();
-        for( Transaction transaction:transactions)
+        for (Transaction transaction : transactions)
             if (today.after(transaction.getDayEnd()))
                 cars.remove(transaction.getCar());
         return cars;
@@ -61,7 +61,7 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public List<Car> getRecommendationCars(String city, String model, String bodyType, String colour) {
-        return carDao.getRecommendationCars(city,model,bodyType,colour);
+        return carDao.getRecommendationCars(city, model, bodyType, colour);
     }
 
     @Override
@@ -75,11 +75,11 @@ public class CarServiceImpl implements CarService{
     }
 
     @Override
-    public List<Car> getCarsByUser(User user){
-        List<Car> cars=carDao.readAll();
+    public List<Car> getCarsByUser(User user) {
+        List<Car> cars = carDao.readAll();
         List<Car> require = new ArrayList<>();
-        for(Car car:cars)
-            if(car.getOwner().getId_user()==user.getId_user())
+        for (Car car : cars)
+            if (car.getOwner().getId_user() == user.getId_user())
                 require.add(car);
         return require;
     }

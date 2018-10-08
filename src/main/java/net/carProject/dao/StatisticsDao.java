@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class StatisticsDao extends CRUDImpl<Statistics> {
 
-    public  StatisticsDao(){super(Statistics.class);}
+    public StatisticsDao() {
+        super(Statistics.class);
+    }
 }

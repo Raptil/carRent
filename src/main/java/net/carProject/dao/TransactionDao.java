@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class TransactionDao extends CRUDImpl<Transaction> {
 
-    public TransactionDao(){super(Transaction.class);}
+    public TransactionDao() {
+        super(Transaction.class);
+    }
 }

@@ -20,5 +20,7 @@ public class HibernateUtil {
         return emf.createEntityManager();
     }
 
-    public static void close() { emf.close(); }
+    public static void close() {
+        emf.close();
+    }
 }

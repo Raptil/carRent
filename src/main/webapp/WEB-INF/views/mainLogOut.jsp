@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -35,22 +34,24 @@
     </div>
 </div>
 <div class="modal fade" id="modal-1">
-    <form action="${contextPath}/login" method="post" >
-    <div class="modal-dialog modal-sm   ">
-        <div class="modal-header InLog">
-            <button class="close" type="button" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Войти</h4>
-        </div>
-        <div class="modal-body">
+    <form action="${contextPath}/login" method="post">
+        <div class="modal-dialog modal-sm   ">
+            <div class="modal-header InLog">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Войти</h4>
+            </div>
+            <div class="modal-body">
 
-            <input name="email" type="text" class="form-control " id="Email1" placeholder="Email" autofocus="true"></input>
-            <input  name="password" type="password" class="form-control " id="Password1" placeholder="пароль"></input>
+                <input name="email" type="text" class="form-control " id="Email1" placeholder="Email"
+                       autofocus="true"></input>
+                <input name="password" type="password" class="form-control " id="Password1"
+                       placeholder="пароль"></input>
+            </div>
+            <div class="modal-footer InLog">
+                <a href="registration.html">Регистрация</a>
+                <button class="btn btn-default" type="submit">Войти</button>
+            </div>
         </div>
-        <div class="modal-footer InLog">
-            <a href="registration.html">Регистрация</a>
-            <button class="btn btn-default" type="submit">Войти</button>
-        </div>
-    </div>
     </form>
 </div>
 
@@ -65,29 +66,29 @@
     <a href="searchLogOut.html"><h3>Поиск транспорта</h3></a>
 </div>
 
-<div class="container " >
+<div class="container ">
     <h3>Новый транспорт</h3>
     <div class="row">
         <c:forEach items="${cars}" var="car">
-        <div class="container col-lg-3 ">
+            <div class="container col-lg-3 ">
 
-            <a href="/car/${car.id_car}">
-                <img class="carPhoto" src="/resources/img/opel.jpg" />
-            </a>
+                <a href="/car/${car.id_car}">
+                    <img class="carPhoto" src="/resources/img/opel.jpg"/>
+                </a>
 
-        </div>
+            </div>
         </c:forEach>
 
     </div>
 </div>
-<div class="container reccomendation" >
+<div class="container reccomendation">
     <h3>Рекомендованный транспорт</h3>
     <div class="row">
         <c:forEach items="${carsRec}" var="carRec">
             <div class="container col-lg-3 ">
 
                 <a href="/car/${carRec.id_car}">
-                    <img class="carPhoto" src="/resources/img/ferrari.jpg" />
+                    <img class="carPhoto" src="/resources/img/ferrari.jpg"/>
                 </a>
 
             </div>
@@ -102,7 +103,9 @@
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>

@@ -17,13 +17,12 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @Controller
 public class TransactionController {
 
     @Autowired
-    @Qualifier(value="TransactionService")
+    @Qualifier(value = "TransactionService")
     private TransactionService transactionService;
 
     @Autowired
@@ -42,13 +41,13 @@ public class TransactionController {
 
     @RequestMapping(value = "/bookIt/{carId}", method = RequestMethod.POST)
     public String bookIt(@PathVariable("carId") int carId,
-                         @RequestParam("dateStart")String dateStr,
-                         @RequestParam ("dateEnd") String dateEn, HttpSession session){
+                         @RequestParam("dateStart") String dateStr,
+                         @RequestParam("dateEnd") String dateEn, HttpSession session) {
         User user = (User) session.getAttribute("user");
         java.sql.Date dateStart = strToDate(dateStr);
         java.sql.Date dateEnd = strToDate(dateEn);
         Car car = carService.getCarById(carId);
-        transactionService.save(user,car,dateStart,dateEnd);
+        transactionService.save(user, car, dateStart, dateEnd);
         return "/mainLogIn";
     }
 

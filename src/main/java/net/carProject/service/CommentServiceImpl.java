@@ -23,9 +23,9 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<Comment> getCommentByCarId(int carId) {
         List<Comment> comments = commentDao.readAll();
-        List<Comment> query = new ArrayList<Comment>() ;
-        for(Comment comment: comments){
-            if(comment.getCar().getId_car() == carId)
+        List<Comment> query = new ArrayList<Comment>();
+        for (Comment comment : comments) {
+            if (comment.getCar().getId_car() == carId)
                 query.add(comment);
         }
         return query;

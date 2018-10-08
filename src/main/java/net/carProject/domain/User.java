@@ -1,10 +1,8 @@
 package net.carProject.domain;
 
 import com.sun.istack.internal.NotNull;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -14,7 +12,7 @@ import java.util.Set;
 public class User {
 
     @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_user;
 
     @ManyToMany
@@ -22,14 +20,14 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "owner",fetch = FetchType.LAZY)
-    private List<Car> cars=new ArrayList<Car>();
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+    private List<Car> cars = new ArrayList<Car>();
 
-    @OneToMany(mappedBy = "commentator",fetch = FetchType.LAZY)
-    private List<Comment> comments=new ArrayList<Comment>();
+    @OneToMany(mappedBy = "commentator", fetch = FetchType.LAZY)
+    private List<Comment> comments = new ArrayList<Comment>();
 
-    @OneToMany(mappedBy = "renter",fetch = FetchType.LAZY)
-    private List<Transaction> transactions= new ArrayList<Transaction>();
+    @OneToMany(mappedBy = "renter", fetch = FetchType.LAZY)
+    private List<Transaction> transactions = new ArrayList<Transaction>();
 
     public List<Car> getCars() {
         return cars;
@@ -59,7 +57,7 @@ public class User {
     @NotNull
     private String name;
 
-    @Column(name="lastName")
+    @Column(name = "lastName")
     @NotNull
     private String lastName;
 
@@ -73,11 +71,11 @@ public class User {
     @Column(name = "gender")
     private String gender;
 
-    @Column(name="email")
+    @Column(name = "email")
     @NotNull
     private String email;
 
-    @Column(name="password")
+    @Column(name = "password")
     @NotNull
     private String password;
 
@@ -96,7 +94,7 @@ public class User {
     @Column(name = "phone")
     private String phone;
 
-    @Column(name="pointsUser")
+    @Column(name = "pointsUser")
     private int pointsUser;
 
     public void setPointsUser(int pointsUser) {
@@ -114,7 +112,6 @@ public class User {
     public void setId_user(int id_user) {
         this.id_user = id_user;
     }
-
 
 
     public String getName() {

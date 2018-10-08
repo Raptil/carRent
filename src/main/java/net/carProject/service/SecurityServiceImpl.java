@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SecurityServiceImpl implements SecurityService{
+public class SecurityServiceImpl implements SecurityService {
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -40,7 +40,7 @@ public class SecurityServiceImpl implements SecurityService{
         if (authenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
-            //logger.debug(String.format("Successfully %s auto logged in", username));
+
         }
 
     }

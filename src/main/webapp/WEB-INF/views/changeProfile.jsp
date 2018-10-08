@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -21,7 +20,7 @@
             <a class="navbar-brand" href="mainLogOut.html">CarService</a>
             <ul class="nav nav-pills">
                 <li class="pull-right">
-                    <a href="/logout"  >Выход</a>
+                    <a href="/logout">Выход</a>
                 </li>
                 <li class="dropdown pull-right">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -40,7 +39,7 @@
 </div>
 
 <div class="container">
-    <form action="/changeProfile/${user.id_user}"  method="post">
+    <form action="/changeProfile/${user.id_user}" method="post">
         <div class="container col-lg-4 pull-right">
 
             <img src=".." class="img-polaroid ">
@@ -54,23 +53,28 @@
 
             <div class="form-group col-lg-offset-4 col-lg-5">
                 <label for="InputName1">Введите имя</label>
-                <input path="name" type="text" class="form-control " name="name" id="InputName1"value="${user.name}"placeholder="${user.name}" ></input>
+                <input path="name" type="text" class="form-control " name="name" id="InputName1" value="${user.name}"
+                       placeholder="${user.name}"></input>
             </div>
             <div class="form-group col-lg-offset-4 col-lg-5">
                 <label for="InputSurname1">Введите фамилию</label>
-                <input path="lastName" type="text" class="form-control" name="lastName" id="InputSurname1" value="${user.lastName}" placeholder="${user.lastName}"></input>
+                <input path="lastName" type="text" class="form-control" name="lastName" id="InputSurname1"
+                       value="${user.lastName}" placeholder="${user.lastName}"></input>
             </div>
             <div class="form-group col-lg-offset-4 col-lg-5">
                 <label for="InputAge1">Введите возраст</label>
-                <input path="age" type="text" class="form-control" name="age" id="InputAge1" value="${user.age}" placeholder="${user.age}"></input>
+                <input path="age" type="text" class="form-control" name="age" id="InputAge1" value="${user.age}"
+                       placeholder="${user.age}"></input>
             </div>
             <div class="form-group  col-lg-offset-4 col-lg-5">
                 <label for="InputCity1">Введите город</label>
-                <input path="city" type="text" class="form-control" name="city" id="InputCity1" value="${user.city}" placeholder="${user.city}"></input>
+                <input path="city" type="text" class="form-control" name="city" id="InputCity1" value="${user.city}"
+                       placeholder="${user.city}"></input>
             </div>
             <div class="form-group  col-lg-offset-4 col-lg-5">
                 <label for="InputPhone1">Введите мобильный телефон</label>
-                <input path="phone" type="text" class="form-control"  name="phone" id="InputPhone1" value="${user.phone}" placeholder="${user.phone}"></input>
+                <input path="phone" type="text" class="form-control" name="phone" id="InputPhone1" value="${user.phone}"
+                       placeholder="${user.phone}"></input>
             </div>
             <div class="form-group col-lg-offset-4 col-lg-5">
                 <label for="InputEmail1">Выберите пол</label>
@@ -89,17 +93,18 @@
             </div>
             <div class="form-group col-lg-offset-4 col-lg-5">
                 <label for="InputEmail1">Введите Email</label>
-                <input path="email" type="email" class="form-control" name="email" id="InputEmail1" value="${user.email}" placeholder="${user.email}"></input>
+                <input path="email" type="email" class="form-control" name="email" id="InputEmail1"
+                       value="${user.email}" placeholder="${user.email}"></input>
             </div>
             <div class="form-group  col-lg-offset-4 col-lg-5">
                 <label for="InputPassword1">Введите пароль</label>
-                <input  path="password" type="password" class="form-control" name="password" id="InputPassword1" value="Password" placeholder="Password"></input>
-            </div> <div class="form-group col-lg-offset-4 col-lg-5">
-            <label for="InputPassword2">Подтвердите пароль</label>
-            <input type="password" class="form-control" id="InputPassword2" placeholder="Password">
-        </div>
-
-
+                <input path="password" type="password" class="form-control" name="password" id="InputPassword1"
+                       value="Password" placeholder="Password"></input>
+            </div>
+            <div class="form-group col-lg-offset-4 col-lg-5">
+                <label for="InputPassword2">Подтвердите пароль</label>
+                <input type="password" class="form-control" id="InputPassword2" placeholder="Password">
+            </div>
 
 
         </div>
@@ -112,7 +117,9 @@
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>

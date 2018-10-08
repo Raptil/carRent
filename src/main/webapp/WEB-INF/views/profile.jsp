@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -20,7 +19,7 @@
             <a class="navbar-brand" href="mainLogOut.html">CarService</a>
             <ul class="nav nav-pills">
                 <li class="pull-right">
-                    <a href="/logout"  >Выход</a>
+                    <a href="/logout">Выход</a>
                 </li>
                 <li class="dropdown pull-right">
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -43,15 +42,15 @@
             <div class="container">
                 <img src="/resources/img/avatar.png" class="img-polaroid ">
                 <form action="/profile" method="get">
-                  <ul>
-                    <li>Имя :${user.name}</li>
-                    <li>Фамилия :${user.lastName}</li>
-                      <li>Город :${user.city}</li>
-                      <li>Пол :${user.gender}</li>
-                      <li>Возраст :${user.age}</li>
-                      <li>Номер телефона :${user.phone}</li>
-                      <li>Email :${user.email}</li>
-                  </ul>
+                    <ul>
+                        <li>Имя :${user.name}</li>
+                        <li>Фамилия :${user.lastName}</li>
+                        <li>Город :${user.city}</li>
+                        <li>Пол :${user.gender}</li>
+                        <li>Возраст :${user.age}</li>
+                        <li>Номер телефона :${user.phone}</li>
+                        <li>Email :${user.email}</li>
+                    </ul>
                 </form>
             </div>
             <div class="container clear">
@@ -70,28 +69,29 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">Transport</a>
+                                        <a href="#collapse1" data-parent="#accordion"
+                                           data-toggle="collapse">Transport</a>
                                     </h4>
                                 </div>
-                                <div id="collapse1"class="panel-collapse collapse in">
+                                <div id="collapse1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <c:forEach items="${cars}" var="car">
                                             <div class="container">
-                                            <a href="/car/${car.id_car}"  data-toggle="collapse">${car.model}</a>
+                                                <a href="/car/${car.id_car}" data-toggle="collapse">${car.model}</a>
                                             </div>
                                         </c:forEach>
                                     </div>
                                 </div>
                             </div>
 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 </div>
 
 
@@ -99,7 +99,9 @@
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>

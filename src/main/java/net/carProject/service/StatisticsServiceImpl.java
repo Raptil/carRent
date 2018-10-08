@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StatisticsServiceImpl implements StatisticsService{
+public class StatisticsServiceImpl implements StatisticsService {
 
     @Autowired
     private StatisticsDao statisticsDao;
@@ -26,17 +26,17 @@ public class StatisticsServiceImpl implements StatisticsService{
         Statistics statistics = new Statistics();
         statistics.setCar(car);
         List<Statistics> stat = statisticsDao.readAll();
-        for(Statistics st:stat)
-            if(st.getCar().getId_car()==car.getId_car()) {
+        for (Statistics st : stat)
+            if (st.getCar().getId_car() == car.getId_car()) {
                 statistics.setComfortable(statistics.getComfortable() + st.getComfortable());
-                statistics.setCostFuel(statistics.getCostFuel()+st.getCostFuel());
-                statistics.setDistance(statistics.getDistance()+st.getDistance());
-                statistics.setRating(statistics.getRating()+st.getRating());
+                statistics.setCostFuel(statistics.getCostFuel() + st.getCostFuel());
+                statistics.setDistance(statistics.getDistance() + st.getDistance());
+                statistics.setRating(statistics.getRating() + st.getRating());
             }
-        statistics.setComfortable(statistics.getComfortable()/stat.size());
-        statistics.setCostFuel(statistics.getCostFuel()/stat.size());
-        statistics.setDistance(statistics.getCostFuel()/stat.size());
-        statistics.setRating(statistics.getRating()/stat.size());
+        statistics.setComfortable(statistics.getComfortable() / stat.size());
+        statistics.setCostFuel(statistics.getCostFuel() / stat.size());
+        statistics.setDistance(statistics.getCostFuel() / stat.size());
+        statistics.setRating(statistics.getRating() / stat.size());
         return statistics;
     }
 }

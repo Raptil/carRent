@@ -16,13 +16,13 @@ public class Car {
 
     @ManyToOne // указывает отношение с таблицей User
     @JoinColumn(name = "id_user") // по какому полю таблицы соединяются
-    private  User owner;
+    private User owner;
 
-    @OneToMany(mappedBy = "car",fetch = FetchType.LAZY) // маппится на car, также загрузка идет при обращении
+    @OneToMany(mappedBy = "car", fetch = FetchType.LAZY) // маппится на car, также загрузка идет при обращении
     private List<Comment> comments = new ArrayList<Comment>();
 
-    @OneToMany(mappedBy = "car",fetch = FetchType.LAZY)
-    private List<Transaction> transactions=new ArrayList<Transaction>();
+    @OneToMany(mappedBy = "car", fetch = FetchType.LAZY)
+    private List<Transaction> transactions = new ArrayList<Transaction>();
 
     public List<Statistics> getStatistics() {
         return statistics;
@@ -40,7 +40,7 @@ public class Car {
         this.pointsCar = pointsCar;
     }
 
-    @OneToMany(mappedBy = "car",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "car", fetch = FetchType.LAZY)
     private List<Statistics> statistics = new ArrayList<>();
 
     public List<Comment> getComments() {
@@ -59,7 +59,7 @@ public class Car {
         this.transactions = transactions;
     }
 
-    @Column(name="model")// явно задается название колонки, которое есть в таблице
+    @Column(name = "model")// явно задается название колонки, которое есть в таблице
     @NotNull// поле не должно быть null
     private String model;
 
@@ -67,15 +67,15 @@ public class Car {
     @NotNull
     private String bodyType;
 
-    @Column(name="stateNumber")
+    @Column(name = "stateNumber")
     @NotNull
     private String stateNumber;
 
-    @Column(name="numberOfDoc")
+    @Column(name = "numberOfDoc")
     @NotNull
     private String numberOfDoc;
 
-    @Column(name="priceDay")
+    @Column(name = "priceDay")
     @NotNull
     private int priceDay;
 

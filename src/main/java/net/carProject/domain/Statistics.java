@@ -1,7 +1,6 @@
 package net.carProject.domain;
 
 
-
 import javax.persistence.*;
 
 @Entity

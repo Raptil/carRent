@@ -26,12 +26,11 @@ public class UserValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
 
-        User user=(User) target;
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors,"name","Required");
-        if (user.getName().length()>8 || user.getName().length()<50){
-            errors.rejectValue("name","Size.userForm.username");
+        User user = (User) target;
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "Required");
+        if (user.getName().length() > 8 || user.getName().length() < 50) {
+            errors.rejectValue("name", "Size.userForm.username");
         }
-
 
 
     }

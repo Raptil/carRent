@@ -16,7 +16,7 @@
     <link href="/resources/css/main.css" rel="stylesheet">
 
 </head>
-<body >
+<body>
 
 <div class="container">
     <div class="navbar ">
@@ -32,7 +32,7 @@
     </div>
 </div>
 <div class="modal fade" id="modal-1">
-    <form action="${contextPath}/login" method="post" >
+    <form action="${contextPath}/login" method="post">
         <div class="modal-dialog modal-sm   ">
             <div class="modal-header InLog">
                 <button class="close" type="button" data-dismiss="modal">&times;</button>
@@ -40,8 +40,10 @@
             </div>
             <div class="modal-body">
 
-                <input name="email" type="text" class="form-control " id="Email1" placeholder="Email" autofocus="true"></input>
-                <input  name="password" type="password" class="form-control " id="Password1" placeholder="пароль"></input>
+                <input name="email" type="text" class="form-control " id="Email1" placeholder="Email"
+                       autofocus="true"></input>
+                <input name="password" type="password" class="form-control " id="Password1"
+                       placeholder="пароль"></input>
             </div>
             <div class="modal-footer InLog">
                 <a href="registration.html">Регистрация</a>
@@ -70,15 +72,15 @@
 
                 </div>
             </div>
-            <div class="item" >
-                <img src="/resources/img/porshe.jpg" width="100%" style="max-height: 500px;" />
+            <div class="item">
+                <img src="/resources/img/porshe.jpg" width="100%" style="max-height: 500px;"/>
                 <div class="carousel-caption">
 
                 </div>
             </div>
 
         </div>
-        <a class="left carousel-control"  role="button" data-slide="prev" href="#homePhoto">
+        <a class="left carousel-control" role="button" data-slide="prev" href="#homePhoto">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Назад</span>
         </a>
@@ -92,23 +94,23 @@
 <div class="container">
     <div class="row">
         <div class="container col-lg-8 pull-left">
-        <div class="container col-lg-12">
-            <form action="/car/${car.id_car}">
+            <div class="container col-lg-12">
+                <form action="/car/${car.id_car}">
 
-                   <ul>
-                       <li>модель :${car.model}</li>
-                       <li>тип кузова :${car.bodyType}</li>
-                       <li>цвет :${car.colour}</li>
-                       <li>топливо на 100 км :${car.fuel100}</li>
-                       <li>цена за день :${car.priceDay}</li>
-                       <li>год выпуска :${car.yearsOld}</li>
-                       <li>город :${car.city}</li>
-                       <li>описание :${car.otherDescription}</li>
-                   </ul>
+                    <ul>
+                        <li>модель :${car.model}</li>
+                        <li>тип кузова :${car.bodyType}</li>
+                        <li>цвет :${car.colour}</li>
+                        <li>топливо на 100 км :${car.fuel100}</li>
+                        <li>цена за день :${car.priceDay}</li>
+                        <li>год выпуска :${car.yearsOld}</li>
+                        <li>город :${car.city}</li>
+                        <li>описание :${car.otherDescription}</li>
+                    </ul>
 
-            </form>
+                </form>
 
-        </div>
+            </div>
             <br>
             <label>Статистика</label>
             <div class="container col-lg-12">
@@ -124,32 +126,32 @@
             <br>
             <div class="container col-lg-12">
                 <label>Комментарии</label>
-                <c:forEach items="${comments}" var="comment" >
+                <c:forEach items="${comments}" var="comment">
                     <hr>${comment.description}</hr>
                 </c:forEach>
             </div>
 
         </div>
 
-        <div class="container col-lg-4 pull-right" >
+        <div class="container col-lg-4 pull-right">
 
-                <div class="container  ">
-                    <a href="mainLogOut.html">
-                        <img class="carPhoto" src="/resources/img/opel.jpg" />
-                    </a>
-                </div>
+            <div class="container  ">
+                <a href="mainLogOut.html">
+                    <img class="carPhoto" src="/resources/img/opel.jpg"/>
+                </a>
+            </div>
             <br>
-                <div class="container  ">
-                    <a href="mainLogOut.html">
-                        <img class="carPhoto" src="/resources/img/ferrari.jpg" />
-                    </a>
-                </div>
+            <div class="container  ">
+                <a href="mainLogOut.html">
+                    <img class="carPhoto" src="/resources/img/ferrari.jpg"/>
+                </a>
+            </div>
             <br>
-                <div class="container  ">
-                    <a href="mainLogOut.html">
-                        <img class="carPhoto" src="/resources/img/porshe.jpg" />
-                    </a>
-                </div>
+            <div class="container  ">
+                <a href="mainLogOut.html">
+                    <img class="carPhoto" src="/resources/img/porshe.jpg"/>
+                </a>
+            </div>
 
         </div>
     </div>
@@ -159,7 +161,9 @@
     <div class="container ">
         <div class="row end">
 
-            <div class="col-lg-3"><small>&copy; CarService</small></div>
+            <div class="col-lg-3">
+                <small>&copy; CarService</small>
+            </div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
             <div class="col-lg-3"><p>8-9525152</p></div>
